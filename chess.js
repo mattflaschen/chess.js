@@ -1183,6 +1183,10 @@ var Chess = function(fen) {
              in_threefold_repetition();
     },
 
+    move_number: function() {
+      return move_number;
+    },
+
     validate_fen: function(fen) {
       return validate_fen(fen);
     },
