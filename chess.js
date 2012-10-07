@@ -1354,7 +1354,7 @@ var Chess = function(fen) {
                           options.newline_char : '\n';
         var regex = new RegExp('^(\\[(.|' + mask(newline_char) + ')*\\])' +
                                '(' + mask(newline_char) + ')*' +
-                               '1\.(' + mask(newline_char) + '|.)*$', 'g');
+                               '(?:1\.)?(' + mask(newline_char) + '|.)*$', 'g');
 
       /* get header part of the PGN file */
       var header_string = pgn.replace(regex, '$1');
